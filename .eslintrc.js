@@ -6,8 +6,7 @@ module.exports = {
         mocha: true,
     },
     extends: [
-        'standard',
-        'plugin:@typescript-eslint/recommended',
+        "plugin:prettier/recommended",
         'plugin:@fintechstudios/chai-as-promised/recommended',
         'plugin:security/recommended',
         'eslint:recommended',
@@ -26,16 +25,15 @@ module.exports = {
     rules: {
         '@typescript-eslint/no-var-requires': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/no-useless-constructor': 'error',
-        "@typescript-eslint/explicit-function-return-type": "off",
-        'node/handle-callback-err': ["warn", "^(e|err|error)$"],
         'mocha/no-skipped-tests': 'error',
         'mocha/no-exclusive-tests': 'error',
-        'camelcase': 'off',
-        'security/detect-non-literal-fs-filename': 'off',
         'no-useless-constructor': 'off',
+        '@typescript-eslint/no-useless-constructor': 'error',
+        camelcase: 'off',
         'no-unused-vars': 'off',
+        'security/detect-non-literal-fs-filename': 'off',
         "no-console": "error",
+        "@typescript-eslint/explicit-function-return-type": "off",
     },
     "overrides": [
         {

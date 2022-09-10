@@ -1,1 +1,1 @@
-export {DateHelper} from "./DateHelper/DateHelper";
+export {DateHelper} from './DateHelper/DateHelper';

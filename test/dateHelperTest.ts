@@ -1,5 +1,5 @@
 import * as chai from 'chai';
-import {DateHelper} from "../src";
+import {DateHelper} from '../src';
 
 const assert = chai.assert;
 
