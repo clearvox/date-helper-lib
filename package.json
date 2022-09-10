@@ -5,11 +5,14 @@
   "main": "dist/src/index.js",
   "types": "dist/types/src/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p .",
     "test": "mocha",
     "lint": "eslint .",
     "prepare": "npm run build"
   },
+  "files": [
+    "dist/src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clearvox/date-helper.git"
