@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "declaration": true,
+    "declarationMap": true,
+    "strict": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist/src",
+    "module": "umd",
+    "target": "es2018",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "lib": [
+      "es2018"
+    ],
+    "types": [
+      "mocha"
+    ]
+  },
+  "exclude": [
+    "**/node_modules/*",
+    "**/dist/*",
+    "**/test/*"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}
