@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Tool to help handling dates",
   "main": "dist/src/index.js",
-  "types": "dist/src/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "tsc -p .",
     "test": "mocha",
@@ -11,7 +11,7 @@
     "prepare": "npm run build"
   },
   "files": [
-    "dist/src"
+    "dist"
   ],
   "repository": {
     "type": "git",
