@@ -1,0 +1,46 @@
+# Run automated tests in a docker container
+
+name: Run Tests
+
+on:
+  push:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  tests:
+    # The type of runner that the job will run on
+    # runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
+
+    env:
+      CI: true
+      GITHUB_SSH_ED25519_KEY_CONTENT: ${{ secrets.SERVER_TO_SERVER_AUTH_SSH_PRIVATE_KEY }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - name: Dump GitHub context
+        id: github_context_step
+        run: |
+          echo '🔎 GitHub context is:\n${{ toJSON(github) }}'
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+      - name: "⏬ Check out repository code"
+        uses: actions/checkout@v3
+
+      - name: "⚙️ Set Node.js 14.x"
+        uses: actions/setup-node@v3
+        with:
+            node-version: '12.x'
+
+      - name: "⚙️ Build project"
+        run: npm run build --if-present
+
+      - name: "⚙️ Run tests"
+        run: npm run test
+
+      - run: echo "✅ Tests run successfully"
