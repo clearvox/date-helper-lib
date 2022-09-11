@@ -35,7 +35,7 @@ jobs:
       - name: "⚙️ Set Node.js 14.x"
         uses: actions/setup-node@v3
         with:
-            node-version: '14.x'
+          node-version-file: '.nvmrc'
 
       - name: "⚙️ Run npm CI"
         run: npm ci
