@@ -8,7 +8,7 @@
     "build": "tsc -p .",
     "test": "mocha",
     "lint": "eslint .",
-    "prepare": "npm run build",
+    "postinstall": "npm run build",
     "detect-duplicates": "jscpd ./src"
   },
   "files": [
@@ -16,14 +16,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clearvox/date-helper.git"
+    "url": "git+https://github.com/clearvox/date-helper-lib.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/clearvox/date-helper/issues"
+    "url": "https://github.com/clearvox/date-helper-lib/issues"
   },
-  "homepage": "https://github.com/clearvox/date-helper#readme",
+  "homepage": "https://github.com/clearvox/date-helper-lib#readme",
   "devDependencies": {
     "@fintechstudios/eslint-plugin-chai-as-promised": "^3.1.0",
     "@types/chai": "^4.3.3",

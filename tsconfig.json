@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
-    "rootDir": "src",
     "declaration": true,
     "declarationMap": true,
-    "strict": true,
     "declarationDir": "dist/types",
     "outDir": "dist/src",
     "module": "umd",
@@ -17,16 +15,9 @@
     "lib": [
       "es2018"
     ],
-    "types": [
-      "mocha"
-    ]
   },
   "exclude": [
-    "**/node_modules/*",
-    "**/dist/*",
-    "**/test/*"
+    "node_modules"
   ],
-  "include": [
-    "./**/*"
-  ]
+  "include": ["src/**/*"]
 }
