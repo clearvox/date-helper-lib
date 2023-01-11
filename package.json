@@ -1,6 +1,6 @@
 {
   "name": "date-helper",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Tool to help handling dates",
   "main": "dist/src/index.js",
   "types": "dist/types/index.d.ts",
@@ -11,9 +11,6 @@
     "postinstall": "npm run build",
     "detect-duplicates": "jscpd ./src"
   },
-  "files": [
-    "dist"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/clearvox/date-helper-lib.git"
