@@ -22,7 +22,9 @@
     "url": "https://github.com/clearvox/date-helper-lib/issues"
   },
   "homepage": "https://github.com/clearvox/date-helper-lib#readme",
-  "dependencies": {},
+  "dependencies": {
+    "typescript": "^4.9.4"
+  },
   "devDependencies": {
     "@fintechstudios/eslint-plugin-chai-as-promised": "^3.1.0",
     "@types/chai": "^4.3.4",
