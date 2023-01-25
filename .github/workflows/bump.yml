@@ -6,6 +6,9 @@ on:
   push:
     branches:
       - 'main'
+  
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
 
 jobs:
   bump-version:
@@ -17,6 +20,7 @@ jobs:
       - name: 'Checkout source code'
         uses: 'actions/checkout@v3'
         with:
+          token: ${{ secrets.TOKEN_WORKAROUND }}
           ref: ${{ github.ref }}
 
       - name: 'cat package.json'
@@ -27,8 +31,11 @@ jobs:
         uses: 'phips28/gh-action-bump-version@master'
         with:
           tag-prefix: 'v'
+          commit-message: 'CI: bumps version to {{version}} [skip ci]'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # TOKEN_WORKAROUND is a personal token, set at organization level, to bypass branch protection rules
+          # this must be also set in actions/checkout@v3 action: https://github.com/phips28/gh-action-bump-version/issues/62
+          GITHUB_TOKEN: ${{ secrets.TOKEN_WORKAROUND }}
 
       - name: 'cat package.json'
         run: cat ./package.json
