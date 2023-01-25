@@ -1,6 +1,6 @@
 {
   "name": "@clearvox/date-helper",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Tool to help handling dates",
   "main": "dist/src/index.js",
   "types": "dist/types/index.d.ts",
